@@ -2,18 +2,19 @@ package tradutor;
 
 public class Tradutor {
 
+	private String traducao;
+	
 	public boolean estaVazio() {
-		return true;
+		return (traducao==null);
 	}
 
-	public void adicionaPalavra(String string, String string2) {
-		// TODO Auto-generated method stub
+	public void adicionaPalavra(String palavra, String traducao) {
+		this.traducao = traducao;
 		
 	}
 
-	public Object traduzir(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public String traduzir(String palavra) {
+		return traducao;
 	}
 
 }
