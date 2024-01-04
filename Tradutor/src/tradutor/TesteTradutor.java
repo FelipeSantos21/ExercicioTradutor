@@ -35,4 +35,13 @@ public class TesteTradutor {
 		assertEquals("bad", t.traduzir("mau"));
 	}
 
+	@Test
+	public void duasTraducoesMesmaPalavra() {
+		t.adicionarTraducao("bom", "good");
+		t.adicionarTraducao("bom", "nice");
+		
+		assertEquals("good, nice", t.traduzir("bom"));
+	}
+
+
 }
