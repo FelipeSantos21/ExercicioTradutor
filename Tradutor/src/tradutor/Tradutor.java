@@ -8,7 +8,7 @@ public class Tradutor {
 		return (traducao==null);
 	}
 
-	public void adicionaPalavra(String palavra, String traducao) {
+	public void adicionarTraducao(String palavra, String traducao) {
 		this.traducao = traducao;
 		
 	}
