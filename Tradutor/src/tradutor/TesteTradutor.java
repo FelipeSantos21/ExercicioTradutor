@@ -21,4 +21,14 @@ public class TesteTradutor {
 		assertEquals("good", t.traduzir("bom"));
 	}
 
+	@Test
+	public void duasTraducoes() {
+		Tradutor t = new Tradutor();
+		t.adicionarTraducao("bom", "good");
+		t.adicionarTraducao("mau", "bad");
+		
+		assertEquals("good", t.traduzir("bom"));
+		assertEquals("bad", t.traduzir("mau"));
+	}
+
 }
