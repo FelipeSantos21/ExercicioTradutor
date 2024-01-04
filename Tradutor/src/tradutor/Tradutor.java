@@ -1,20 +1,22 @@
 package tradutor;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Tradutor {
 
-	private String traducao;
+	private Map<String,String> traducao = new HashMap<>();
 	
 	public boolean estaVazio() {
-		return (traducao==null);
+		return (traducao.isEmpty());
 	}
 
 	public void adicionarTraducao(String palavra, String traducao) {
-		this.traducao = traducao;
-		
+		this.traducao.put(palavra, traducao);
 	}
 
 	public String traduzir(String palavra) {
-		return traducao;
+		return traducao.get(palavra);
 	}
 
 }
