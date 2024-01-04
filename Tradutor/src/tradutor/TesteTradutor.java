@@ -2,19 +2,24 @@ package tradutor;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TesteTradutor {
-
+	private Tradutor t;
+	
+	@Before
+	public void criarTradutor () {
+		t = new Tradutor();
+	}
+	
 	@Test
 	public void tradutorSemPalavras() {
-		Tradutor t = new Tradutor();
 		assertTrue(t.estaVazio());
 	}
 
 	@Test
 	public void umaTraducao() {
-		Tradutor t = new Tradutor();
 		t.adicionarTraducao("bom", "good");
 		
 		assertFalse(t.estaVazio());
@@ -23,7 +28,6 @@ public class TesteTradutor {
 
 	@Test
 	public void duasTraducoes() {
-		Tradutor t = new Tradutor();
 		t.adicionarTraducao("bom", "good");
 		t.adicionarTraducao("mau", "bad");
 		

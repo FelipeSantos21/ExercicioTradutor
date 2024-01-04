@@ -5,18 +5,18 @@ import java.util.Map;
 
 public class Tradutor {
 
-	private Map<String,String> traducao = new HashMap<>();
+	private Map<String,String> traducoes = new HashMap<>();
 	
 	public boolean estaVazio() {
-		return (traducao.isEmpty());
+		return (traducoes.isEmpty());
 	}
 
 	public void adicionarTraducao(String palavra, String traducao) {
-		this.traducao.put(palavra, traducao);
+		this.traducoes.put(palavra, traducao);
 	}
 
 	public String traduzir(String palavra) {
-		return traducao.get(palavra);
+		return traducoes.get(palavra);
 	}
 
 }
